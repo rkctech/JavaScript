@@ -127,55 +127,6 @@ console.log(sum);
 
 The `reduce` method iterates through the array, accumulating the values based on the provided function (`(acc, num) => acc + num` in this case). It results in the sum of all elements in the array. The initial value is set to 0 (`0` in this case).
 
-### For Loop:
-```javascript
-for (let i = 0; i < array.length; i++) {
-    // Code block to be executed
-}
-```
-Example:
-```javascript
-const arr = [1, 2, 3, 4];
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
-```
-
-### While Loop:
-```javascript
-let i = 0;
-while (i < array.length) {
-    // Code block to be executed
-    i++;
-}
-```
-Example:
-```javascript
-const arr = [1, 2, 3, 4];
-let i = 0;
-while (i < arr.length) {
-    console.log(arr[i]);
-    i++;
-}
-```
-
-### Do-While Loop:
-```javascript
-let i = 0;
-do {
-    // Code block to be executed
-    i++;
-} while (i < array.length);
-```
-Example:
-```javascript
-const arr = [1, 2, 3, 4];
-let i = 0;
-do {
-    console.log(arr[i]);
-    i++;
-} while (i < arr.length);
-```
 
 ### For-In Loop (For Objects):
 ```javascript
@@ -239,4 +190,54 @@ Value: 5, Index: 4, Array: [1,2,3,4,5]
 ```
 
 Note: The `index` and `array` parameters are optional, and you can choose to use only the ones you need in your callback function.
+### For Loop:
+```javascript
+for (let i = 0; i < array.length; i++) {
+    // Code block to be executed
+}
+```
+Example:
+```javascript
+const arr = [1, 2, 3, 4];
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+```
+
+### While Loop:
+```javascript
+let i = 0;
+while (i < array.length) {
+    // Code block to be executed
+    i++;
+}
+```
+Example:
+```javascript
+const arr = [1, 2, 3, 4];
+let i = 0;
+while (i < arr.length) {
+    console.log(arr[i]);
+    i++;
+}
+```
+
+### Do-While Loop:
+```javascript
+let i = 0;
+do {
+    // Code block to be executed
+    i++;
+} while (i < array.length);
+```
+Example:
+```javascript
+const arr = [1, 2, 3, 4];
+let i = 0;
+do {
+    console.log(arr[i]);
+    i++;
+} while (i < arr.length);
+```
+
 
