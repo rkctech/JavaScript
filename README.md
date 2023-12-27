@@ -127,6 +127,7 @@ console.log(sum);
 
 The `reduce` method iterates through the array, accumulating the values based on the provided function (`(acc, num) => acc + num` in this case). It results in the sum of all elements in the array. The initial value is set to 0 (`0` in this case).
 
+# Exploring JavaScript Looping Constructs
 
 ### For-In Loop (For Objects):
 ```javascript
