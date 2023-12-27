@@ -313,7 +313,7 @@ console.log(real_another_array);
 ```
 
 Choose the method that suits your preferences and coding style. The spread operator is often favored for its conciseness and readability.
-#**Exploring Array Operations in JavaScript: Array Type Check, Array Conversion, and Array Creation**
+# **Exploring Array Operations in JavaScript: Array Type Check, Array Conversion, and Array Creation**
 
 1. `console.log(Array.isArray("Hitesh"))` - This checks whether the value `"Hitesh"` is an array. The output will be `false` because `"Hitesh"` is a string, not an array.
 
