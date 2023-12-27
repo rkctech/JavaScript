@@ -91,7 +91,7 @@ const fruits = ['apple', 'banana', 'orange', 'grape', 'kiwi'];
 const slicedFruits = fruits.slice(1, 4);
 // Result: slicedFruits is ['banana', 'orange', 'grape']
 ```
-### Array.map():
+## Array.map():
 ```javascript
 const arr = [1, 2, 3, 4];
 const squaredArr = arr.map((num) => {
@@ -103,7 +103,7 @@ console.log(squaredArr);
 
 The `map` method transforms each element of the array by applying the provided function (`(num) => num * num` in this case), resulting in a new array where each element is the square of the original element.
 
-### Array.filter():
+## Array.filter():
 ```javascript
 const arr = [1, 2, 3, 4];
 const evenNums = arr.filter((num) => {
@@ -115,7 +115,7 @@ console.log(evenNums);
 
 The `filter` method creates a new array containing only the elements that satisfy the provided condition. In this example, it filters out only the even numbers.
 
-### Array.reduce():
+## Array.reduce():
 ```javascript
 const arr = [1, 2, 3, 4];
 const sum = arr.reduce((acc, num) => {
@@ -129,7 +129,7 @@ The `reduce` method iterates through the array, accumulating the values based on
 
 # Exploring JavaScript Looping Constructs
 
-### For-In Loop (For Objects):
+## For-In Loop (For Objects):
 ```javascript
 for (let key in object) {
     // Code block to be executed
@@ -143,7 +143,7 @@ for (let key in person) {
 }
 ```
 
-### For-Of Loop (For Iterables - Arrays, Strings, etc.):
+## For-Of Loop (For Iterables - Arrays, Strings, etc.):
 ```javascript
 for (let item of iterable) {
     // Code block to be executed
@@ -157,7 +157,7 @@ for (let num of arr) {
 }
 ```
 
-### Array.forEach():
+## Array.forEach():
 In JavaScript, the `forEach` method is commonly used to iterate over elements in an array. The `forEach` function takes a callback function as an argument, and this callback function can take up to three parameters:
 
 1. **currentValue**: The current element being processed in the array.
@@ -191,7 +191,7 @@ Value: 5, Index: 4, Array: [1,2,3,4,5]
 ```
 
 Note: The `index` and `array` parameters are optional, and you can choose to use only the ones you need in your callback function.
-### For Loop:
+## For Loop:
 ```javascript
 for (let i = 0; i < array.length; i++) {
     // Code block to be executed
@@ -205,7 +205,7 @@ for (let i = 0; i < arr.length; i++) {
 }
 ```
 
-### While Loop:
+## While Loop:
 ```javascript
 let i = 0;
 while (i < array.length) {
@@ -223,7 +223,7 @@ while (i < arr.length) {
 }
 ```
 
-### Do-While Loop:
+## Do-While Loop:
 ```javascript
 let i = 0;
 do {
@@ -242,7 +242,7 @@ do {
 ```
 # Various Methods for Concatenating Arrays in JavaScript
 
-### 1. Using `concat` method:
+## 1. Using `concat` method:
 
 ```javascript
 const array1 = [1, 2, 3];
@@ -252,7 +252,7 @@ const concatenatedArray = array1.concat(array2);
 console.log(concatenatedArray);
 ```
 
-### 2. Using the spread (`...`) operator:
+## 2. Using the spread (`...`) operator:
 
 ```javascript
 const array1 = [1, 2, 3];
@@ -262,7 +262,7 @@ const concatenatedArray = [...array1, ...array2];
 console.log(concatenatedArray);
 ```
 
-### 3. Using `push` method with a loop:
+## 3. Using `push` method with a loop:
 
 ```javascript
 const array1 = [1, 2, 3];
@@ -275,7 +275,7 @@ array2.forEach(element => {
 console.log(array1);
 ```
 
-### 4. Using `Array.prototype.push` with the spread operator:
+## 4. Using `Array.prototype.push` with the spread operator:
 
 ```javascript
 const array1 = [1, 2, 3];
