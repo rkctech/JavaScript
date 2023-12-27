@@ -294,6 +294,18 @@ array2.unshift(...array1);
 const concatenatedArray = array2;
 console.log(concatenatedArray);
 ```
+### 6. Flatten Nested Arrays in JavaScript using `flat` Method
+
+```javascript
+const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
+const real_another_array = another_array.flat(Infinity);
+console.log(real_another_array);
+```
+
+**Output:**
+```
+[1, 2, 3, 4, 5, 6, 7, 6, 7, 4, 5]
+```
 
 Choose the method that suits your preferences and coding style. The spread operator is often favored for its conciseness and readability.
 
