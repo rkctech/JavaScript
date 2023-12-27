@@ -323,4 +323,92 @@ Choose the method that suits your preferences and coding style. The spread opera
 
 4. `let score1 = 100 let score2 = 200 let score3 = 300 console.log(Array.of(score1, score2, score3));` - This uses `Array.of()` to create a new array with the values `100`, `200`, and `300` as elements. The output will be `[100, 200, 300]`. `Array.of()` creates an array from its arguments, regardless of their types.
 
+```javascript
+const mySym = Symbol("key1");
+
+const JsUser = {
+    name: "Hitesh",
+    "full name": "Hitesh Choudhary",
+    [mySym]: "mykey1",
+    age: 18,
+    location: "Jaipur",
+    email: "hitesh@google.com",
+    isLoggedIn: false,
+    lastLoginDays: ["Monday", "Saturday"]
+};
+
+// Modify the email property
+JsUser.email = "hitesh@chatgpt.com";
+
+// Prevent further modifications to the object
+Object.freeze(JsUser);
+
+// Attempt to modify the email property (no effect due to Object.freeze)
+JsUser.email = "hitesh@microsoft.com";
+
+// Add functions as properties to the JsUser object
+JsUser.greeting = function() {
+    console.log("Hello JS user");
+};
+
+// Corrected syntax for greetingTwo function
+JsUser.greetingTwo = function() {
+    console.log(`Hello JS user, ${this.name}`);
+};
+
+// Display the output of functions
+console.log(JsUser.greeting()); // Prints: Hello JS user, undefined
+console.log(JsUser.greetingTwo()); // Prints: Hello JS user, Hitesh
+
+// Creating an object using object literal notation
+const tinderUser = {
+    id: "123abc",
+    name: "Sammy",
+    isLoggedIn: false
+};
+
+// Creating a nested object
+const regularUser = {
+    email: "some@gmail.com",
+    fullname: {
+        userfullname: {
+            firstname: "hitesh",
+            lastname: "choudhary"
+        }
+    }
+};
+
+// Object spreading to combine properties from obj1 and obj2
+const obj3 = {...obj1, ...obj2};
+
+// Array of objects with id and email properties
+const users = [
+    { id: 1, email: "h@gmail.com" },
+    { id: 1, email: "h@gmail.com" },
+    { id: 1, email: "h@gmail.com" }
+];
+
+// Using Object.keys, Object.values, and Object.entries methods
+console.log(Object.keys(tinderUser));    // Output: ["id", "name", "isLoggedIn"]
+console.log(Object.values(tinderUser));  // Output: ["123abc", "Sammy", false]
+console.log(Object.entries(tinderUser)); // Output: [["id", "123abc"], ["name", "Sammy"], ["isLoggedIn", false]]
+
+// Checking if a property exists in tinderUser
+console.log(tinderUser.hasOwnProperty('isLoggedIn')); // Output: true
+
+// Object destructuring to extract the courseInstructor property
+const {courseInstructor: instructor} = course;
+
+// Logging the value of instructor
+console.log(instructor);
+
+// Representation of an array containing three empty objects
+[
+    {},
+    {},
+    {}
+]
+
+```
+
 
