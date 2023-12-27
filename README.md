@@ -206,16 +206,37 @@ for (let num of arr) {
 ```
 
 ### Array.forEach():
+In JavaScript, the `forEach` method is commonly used to iterate over elements in an array. The `forEach` function takes a callback function as an argument, and this callback function can take up to three parameters:
+
+1. **currentValue**: The current element being processed in the array.
+2. **index (optional)**: The index of the current element being processed.
+3. **array (optional)**: The array `forEach` is being called upon.
+
+Here's an example using all three parameters:
+
 ```javascript
-array.forEach((element, index, array) => {
-    // Code block to be executed for each element
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function(currentValue, index, array) {
+  console.log(`Value: ${currentValue}, Index: ${index}, Array: [${array}]`);
 });
 ```
-Example:
-```javascript
-const arr = [1, 2, 3, 4];
-arr.forEach((num) => {
-    console.log(num);
-});
+
+In this example:
+
+- `currentValue` represents the current element in the array during each iteration.
+- `index` represents the index of the current element.
+- `array` is the array that `forEach` is being called upon.
+
+The output of the above code will be:
+
 ```
+Value: 1, Index: 0, Array: [1,2,3,4,5]
+Value: 2, Index: 1, Array: [1,2,3,4,5]
+Value: 3, Index: 2, Array: [1,2,3,4,5]
+Value: 4, Index: 3, Array: [1,2,3,4,5]
+Value: 5, Index: 4, Array: [1,2,3,4,5]
+```
+
+Note: The `index` and `array` parameters are optional, and you can choose to use only the ones you need in your callback function.
 
