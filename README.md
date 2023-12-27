@@ -129,7 +129,7 @@ The `reduce` method iterates through the array, accumulating the values based on
 
 # Exploring JavaScript Looping Constructs
 
-## For-In Loop (For Objects):
+## For-In Loop:
 ```javascript
 for (let key in object) {
     // Code block to be executed
@@ -137,10 +137,14 @@ for (let key in object) {
 ```
 Example:
 ```javascript
-const person = { name: 'John', age: 30, city: 'New York' };
-for (let key in person) {
-    console.log(key, person[key]);
+const myArray = [1, 2, 3, 4];
+
+`for...in` is a loop in JavaScript designed for object iteration and should be avoided for arrays due to potential unexpected behavior. Instead, use `for...of` or array methods like `forEach` for safe and predictable array iteration.
+
+for (let index in myArray) {
+  console.log(index, myArray[index]);
 }
+
 ```
 
 ## For-Of Loop (For Iterables - Arrays, Strings, etc.):
