@@ -1,4 +1,76 @@
+# JavaScript Variable Declaration and Modification
+```javascript
+// Using const for a constant value (cannot be reassigned)
+const accountId = 144553;
 
+// Using let for variables that may be reassigned
+let accountEmail = "hitesh@google.com";
+let accountPassword = "12345";
+
+// Using var (prefer let or const) - consider avoiding var due to scope issues
+var accountCity = "Jaipur";
+
+// Declaring a variable without assigning a value (undefined by default)
+let accountState;
+
+// Uncommenting the line below will result in an error because you cannot reassign a constant
+// accountId = 2;
+
+// Modifying the values of the variables
+accountEmail = "hc@hc.com";
+accountPassword = "21212121";
+accountCity = "Bengaluru";
+
+// Logging the value of accountId
+console.log(accountId);
+
+// Displaying the values of the variables in a table format
+console.table([accountId, accountEmail, accountPassword, accountCity, accountState]);
+```
+
+**Output:**
+```plaintext
+144553
+┌────────────────┬────────────────────┐
+│ (index)        │      Values        │
+├────────────────┼────────────────────┤
+│   accountId    │       144553       │
+│ accountEmail   │ 'hc@hc.com'        │
+│ accountPassword│    '21212121'      │
+│  accountCity   │   'Bengaluru'      │
+│ accountState   │       undefined    │
+└────────────────┴────────────────────┘
+```
+#  JavaScript Data Types and Variable Declarations
+```javascript
+// Number: Represents numeric values, maximum safe integer is 2 to the power of 53
+let myNumber = 42;
+console.log(typeof myNumber); // Output: number
+
+// BigInt: Represents integers of arbitrary precision
+let myBigInt = 9007199254740991n;
+console.log(typeof myBigInt); // Output: bigint
+
+// String: Represents text, can be enclosed in double ("") or single ('') quotes
+let myString = "Hello, World!";
+console.log(typeof myString); // Output: string
+
+// Boolean: Represents true or false values
+let isTrue = true;
+console.log(typeof isTrue); // Output: boolean
+
+// Null: Represents a deliberate absence of any object value
+let nullValue = null;
+console.log(typeof nullValue); // Output: object (known quirk in JavaScript)
+
+// Undefined: Represents a variable or object property that has not been assigned a value
+let undefinedVariable;
+console.log(typeof undefinedVariable); // Output: undefined
+
+// Symbol: Represents a unique and immutable data type, used to create unique identifiers
+let mySymbol = Symbol("unique");
+console.log(typeof mySymbol); // Output: symbol
+```
 1. **Concatenation:**
    ```javascript
    var str1 = "Hello";
