@@ -100,8 +100,6 @@ console.log(myVariable); // Output: undefined
 **Note:**
 - While `null` is a deliberate assignment to indicate a lack of value, `undefined` often represents the default state of variables that haven't been explicitly set.
 
-In summary, use `null` when you want to explicitly indicate the absence of a value, and `undefined` is often used by the JavaScript engine to denote that a variable or property hasn't been assigned a value.
-
 1. **Concatenation:**
    ```javascript
    var str1 = "Hello";
