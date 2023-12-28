@@ -271,22 +271,23 @@ let undefinedComparison4 = undefined <= null;  // false
 ```javascript
 let strictEquality = "2" === 2; // false
 ```
-```javascript
-// Numeric Operations:
+# Numeric Operations:
 
-const score = 400; // Declares a variable and logs it
+```javascript
+const score = 400; 
 console.log(score); // Output: 400
 
 const balance = new Number(100); // Declares a Number object with value 100 and logs it
 console.log(balance); // Output: [Number: 100]
-console.log(balance.toString().length); // Logs the length of the string representation
-console.log(balance.toFixed(1)); // Logs the value with one decimal place
+console.log(typeof(balance.toString())); //string
+console.log(balance.toString().length); // 3
+console.log(balance.toFixed(1)); // Logs the value with one decimal place //100.0
 
 const otherNumber = 123.8966; 
-console.log(otherNumber.toPrecision(4)); // Logs the number in exponential notation with precision 4
+console.log(otherNumber.toPrecision(4)); // 123.9 // Logs the number in exponential notation with precision 4
 
 const hundreds = 1000000;
-console.log(hundreds.toLocaleString('en-IN')); // Logs the number formatted as a locale-specific string
+console.log(hundreds.toLocaleString('en-IN'));// Logs the number formatted as a locale-specific string
 // Output: 10,00,000
 
 // Math Operations:
@@ -334,10 +335,11 @@ const max = 20;
 console.log(Math.floor(Math.random() * (max - min + 1)) + min); // Logs a random integer between 10 and 20 (inclusive)
 // Output: Random integer between 10 and 20
 ```
-
-
-
-
+# String Operations:
+```javascript
+const strObj = new String('Hello, World!');
+console.log(strObj); // Outputs: [String: 'Hello, World!']
+```
 1. **Concatenation:**
    ```javascript
    var str1 = "Hello";
