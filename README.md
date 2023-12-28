@@ -13,6 +13,12 @@ var accountCity = "Jaipur";
 // Declaring a variable without assigning a value (undefined by default)
 let accountState;
 
+// Chained Assignment
+// Multiple variables can be assigned the same value in a single line.
+
+let num1, num2, num3;
+num1 = num2 = num3 = 2 + 2; // All three variables become 4
+
 // Uncommenting the line below will result in an error because you cannot reassign a constant
 // accountId = 2;
 
@@ -203,13 +209,6 @@ let numStrConcat1 = "1" + 2; // "12"
 let numStrConcat2 = 1 + "2"; // "12"
 let strNumConcat1 = "1" + 2 + 2; // "122"
 let numStrConcat3 = 1 + 2 + "2"; // "32"
-```
-## Chained Assignment
-- Multiple variables can be assigned the same value in a single line.
-
-```javascript
-let num1, num2, num3;
-num1 = num2 = num3 = 2 + 2; // All three variables become 4
 ```
 
 ## Increment and Assignment
