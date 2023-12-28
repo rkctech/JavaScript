@@ -199,6 +199,11 @@ let greaterThanOrEqual = 2 >= 1; // true
 let lessThan = 2 < 1; // false
 let equalTo = 2 == 1; // false
 let notEqualTo = 2 != 1; // true
+
+const id = Symbol('123');
+const anotherId = Symbol('123');
+console.log(id === anotherId);
+
 ```
 ## Type Coercion
 - JavaScript performs type coercion when comparing values of different types.
