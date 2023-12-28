@@ -140,6 +140,136 @@ console.log(myVariable); // Output: undefined
 - **Conversion Rule:**
   - Any data type can be converted to a string.
   - The conversion is straightforward, preserving the value but representing it as a string.
+ 
+# JavaScript Operators and Type Coercion
+
+```plaintext
+# JavaScript Operators and Type Coercion
+
+## Unary Minus and Unary Plus
+- Unary Minus (`-`) negates a numeric value.
+- Unary Plus (`+`) attempts to convert an operand to a number.
+
+```javascript
+let value = 3;
+let negValue = -value; // negValue becomes -3
+let posValue = +value; // posValue becomes 3
+```
+
+## Arithmetic Operations
+- Basic arithmetic operations include addition (+), subtraction (-), multiplication (*), exponentiation (**), division (/), and modulus (%).
+
+```javascript
+let addition = 2 + 2; // 4
+let subtraction = 2 - 2; // 0
+let multiplication = 2 * 2; // 4
+let exponentiation = 2 ** 3; // 8
+let division = 2 / 3; // 0.666...
+let modulus = 2 % 3; // 2
+```
+
+## String Concatenation
+- The `+` operator is used for string concatenation, joining two strings together.
+
+```javascript
+let str1 = "hello";
+let str2 = " hitesh";
+let str3 = str1 + str2; // "hello hitesh"
+```
+
+## Numeric and String Concatenation
+- Numeric and string concatenation result in string conversion if one operand is a string.
+
+```javascript
+let numStrConcat1 = "1" + 2; // "12"
+let numStrConcat2 = 1 + "2"; // "12"
+let strNumConcat1 = "1" + 2 + 2; // "122"
+let numStrConcat3 = 1 + 2 + "2"; // "32"
+```
+
+## Operator Precedence
+- Parentheses can be used to control the order of operations.
+
+```javascript
+let precedenceResult = (3 + 4) * 5 % 3; // 2
+```
+
+## Chained Assignment
+- Multiple variables can be assigned the same value in a single line.
+
+```javascript
+let num1, num2, num3;
+num1 = num2 = num3 = 2 + 2; // All three variables become 4
+```
+
+## Increment Operator
+- The increment operator (`++`) increases the value of a variable.
+
+```javascript
+let gameCounter = 100;
+++gameCounter; // gameCounter becomes 101
+```
+
+## Increment and Assignment
+- Post-increment (`x++`) and pre-increment (`++x`) operations.
+
+```javascript
+let x = 3;
+const y = x++; // x: 4, y: 3
+
+let a = 3;
+const b = ++a; // a: 4, b: 4
+```
+
+## Comparison Operators
+- Comparison operators include greater than (>), greater than or equal to (>=), less than (<), equal to (==), and not equal to (!=).
+
+```javascript
+let greaterThan = 2 > 1; // true
+let greaterThanOrEqual = 2 >= 1; // true
+let lessThan = 2 < 1; // false
+let equalTo = 2 == 1; // false
+let notEqualTo = 2 != 1; // true
+```
+
+## String Comparison
+- Strings are compared based on their Unicode code points.
+
+```javascript
+let strComparison1 = "2" > 1; // true
+let strComparison2 = "02" > 1; // true
+```
+
+## Null and Undefined Comparison
+- `null` is considered equal to `undefined` but not greater or less than.
+
+```javascript
+let nullComparison1 = null > 0; // false
+let nullComparison2 = null == 0; // false
+let nullComparison3 = null >= 0; // true
+```
+
+## Strict Equality
+- Strict equality (`===`) compares both value and type.
+
+```javascript
+let strictEquality = "2" === 2; // false
+```
+
+## Type Coercion
+- JavaScript performs type coercion when comparing values of different types.
+- Numeric strings are converted to numbers during comparison.
+- `null` is treated as 0 in numeric operations.
+- `undefined` becomes `NaN` in numeric operations.
+- Boolean values are converted to 1 (`true`) or 0 (`false`) in numeric operations.
+```javascript
+let valueInNumber = Number("33"); // 33
+let isLoggedIn = "hitesh";
+let booleanIsLoggedIn = Boolean(isLoggedIn); // true
+let someNumber = 33;
+let stringNumber = String(someNumber); // "33"
+```
+
 
 1. **Concatenation:**
    ```javascript
