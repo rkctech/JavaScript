@@ -271,6 +271,69 @@ let undefinedComparison4 = undefined <= null;  // false
 ```javascript
 let strictEquality = "2" === 2; // false
 ```
+```javascript
+// Numeric Operations:
+
+const score = 400; // Declares a variable and logs it
+console.log(score); // Output: 400
+
+const balance = new Number(100); // Declares a Number object with value 100 and logs it
+console.log(balance); // Output: [Number: 100]
+console.log(balance.toString().length); // Logs the length of the string representation
+console.log(balance.toFixed(1)); // Logs the value with one decimal place
+
+const otherNumber = 123.8966; 
+console.log(otherNumber.toPrecision(4)); // Logs the number in exponential notation with precision 4
+
+const hundreds = 1000000;
+console.log(hundreds.toLocaleString('en-IN')); // Logs the number formatted as a locale-specific string
+// Output: 10,00,000
+
+// Math Operations:
+
+console.log(Math); // Logs the Math object
+/*
+Output (partial):
+Math {
+  E: 2.718281828459045,
+  LN10: 2.302585092994046,
+  LN2: 0.6931471805599453,
+  ...
+}
+*/
+
+console.log(Math.abs(-4)); // Logs the absolute value
+// Output: 4
+
+console.log(Math.round(4.6)); // Logs the rounded value
+// Output: 5
+
+console.log(Math.ceil(4.2)); // Logs the ceiling value
+// Output: 5
+
+console.log(Math.floor(4.9)); // Logs the floor value
+// Output: 4
+
+console.log(Math.min(4, 3, 6, 8)); // Logs the minimum value
+// Output: 3
+
+console.log(Math.max(4, 3, 6, 8)); // Logs the maximum value
+// Output: 8
+
+console.log(Math.random()); // Logs a random number between 0 and 1
+// Output: Random decimal between 0 and 1
+
+console.log((Math.random() * 10) + 1); // Logs a random number between 1 and 10
+// Output: Random decimal between 1 and 11
+
+console.log(Math.floor(Math.random() * 10) + 1); // Logs a random integer between 1 and 10
+// Output: Random integer between 1 and 10
+
+const min = 10;
+const max = 20;
+console.log(Math.floor(Math.random() * (max - min + 1)) + min); // Logs a random integer between 10 and 20 (inclusive)
+// Output: Random integer between 10 and 20
+```
 
 
 
