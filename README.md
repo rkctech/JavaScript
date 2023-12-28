@@ -179,6 +179,27 @@ let str1 = "hello";
 let str2 = " hitesh";
 let str3 = str1 + str2; // "hello hitesh"
 ```
+## Increment and Assignment
+- Post-increment (`x++`) and pre-increment (`++x`) operations.
+
+```javascript
+let x = 3;
+const y = x++; // x: 4, y: 3
+
+let a = 3;
+const b = ++a; // a: 4, b: 4
+```
+
+## Comparison Operators
+- Comparison operators include greater than (>), greater than or equal to (>=), less than (<), equal to (==), and not equal to (!=).
+
+```javascript
+let greaterThan = 2 > 1; // true
+let greaterThanOrEqual = 2 >= 1; // true
+let lessThan = 2 < 1; // false
+let equalTo = 2 == 1; // false
+let notEqualTo = 2 != 1; // true
+```
 ## Type Coercion
 - JavaScript performs type coercion when comparing values of different types.
 - Numeric strings are converted to numbers during comparison.
@@ -211,28 +232,6 @@ let strNumConcat1 = "1" + 2 + 2; // "122"
 let numStrConcat3 = 1 + 2 + "2"; // "32"
 ```
 
-## Increment and Assignment
-- Post-increment (`x++`) and pre-increment (`++x`) operations.
-
-```javascript
-let x = 3;
-const y = x++; // x: 4, y: 3
-
-let a = 3;
-const b = ++a; // a: 4, b: 4
-```
-
-## Comparison Operators
-- Comparison operators include greater than (>), greater than or equal to (>=), less than (<), equal to (==), and not equal to (!=).
-
-```javascript
-let greaterThan = 2 > 1; // true
-let greaterThanOrEqual = 2 >= 1; // true
-let lessThan = 2 < 1; // false
-let equalTo = 2 == 1; // false
-let notEqualTo = 2 != 1; // true
-```
-
 ## String Comparison
 - Strings are compared based on their Unicode code points.
 
@@ -246,8 +245,20 @@ let strComparison2 = "02" > 1; // true
 
 ```javascript
 let nullComparison1 = null > 0; // false
-let nullComparison2 = null == 0; // false
+let nullComparison2 = null == 0; // false ( this is specific case in js)
 let nullComparison3 = null >= 0; // true
+let nullComparison4 = null <= 0;// true
+
+let undefinedComparison1 = undefined > 0; // false
+let undefinedComparison2 = undefined == 0; // false
+let undefinedComparison3 = undefined >= 0; // false
+let undefinedComparison4 = undefined <= 0; // false
+
+let undefinedComparison1 = undefined > null;   // false
+let undefinedComparison2 = undefined == null;  // true ( this is specific case in js)
+let undefinedComparison3 = undefined >= null;  // false
+let undefinedComparison4 = undefined <= null;  // false
+
 ```
 
 ## Strict Equality
