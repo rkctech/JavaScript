@@ -1,3 +1,169 @@
+
+1. **Concatenation:**
+   ```javascript
+   var str1 = "Hello";
+   var str2 = " World";
+   var result = str1 + str2;
+   var resultConcat = str1.concat(str2);
+   // Result: "Hello World"
+  
+  Explanation: Concatenation combines two strings into a single string.
+
+2. **String Length:**
+   ```javascript
+   var str = "Hello";
+   var length = str.length;
+   // Length: 5
+   ```
+   Explanation: The `length` property provides the number of characters in a string.
+
+3. **Accessing Characters:**
+   ```javascript
+   var str = "Hello";
+   var firstChar = str[0];
+   // First Character: "H"
+   ```
+   Explanation: Square brackets allow access to individual characters by index.
+
+4. **Substring:**
+   ```javascript
+   var str = "Hello World";
+   var substr = str.substring(0, 5);
+   // Substring: "Hello"
+   ```
+   Explanation: The `substring` method extracts a portion of a string based on indices.
+
+5. **Substring with Slice:**
+   ```javascript
+   var str = "Hello World";
+   var slicedStr = str.slice(0, 5);
+   // Sliced Substring: "Hello"
+   ```
+   Explanation: Similar to `substring`, `slice` extracts a substring with start and end indices.
+
+6. **Searching in a String:**
+   ```javascript
+   var str = "Hello World";
+   var index = str.indexOf("World");
+   // Index of "World": 6
+   ```
+   Explanation: The `indexOf` method finds the starting index of a specified text.
+
+7. **Replacing Substrings:**
+   ```javascript
+   var str = "Hello World";
+   var newStr = str.replace("World", "Universe");
+   // Replaced String: "Hello Universe"
+   ```
+   Explanation: The `replace` method replaces a specified substring with another.
+
+8. **Converting Case:**
+   ```javascript
+   var str = "Hello World";
+   var upper = str.toUpperCase();
+   var lower = str.toLowerCase();
+   // Uppercase: "HELLO WORLD", Lowercase: "hello world"
+   ```
+   Explanation: `toUpperCase` and `toLowerCase` change the case of the string.
+
+9. **Trimming Whitespace:**
+   ```javascript
+   var str = "   Hello World   ";
+   var trimmedStr = str.trim();
+   // Trimmed String: "Hello World"
+   ```
+   Explanation: The `trim` method removes leading and trailing whitespaces.
+
+10. **trimStart and trimEnd:**
+    ```javascript
+    var str = "   Hello World   ";
+    var trimmedStart = str.trimStart();
+    var trimmedEnd = str.trimEnd();
+
+
+    // Trimmed Start: "Hello World   ", Trimmed End: "   Hello World"
+    ```
+    Explanation: These methods remove whitespace from the beginning (left) or end (right) of a string.
+
+11. **Splitting a String:**
+    ```javascript
+    var str = "Hello,World";
+    var array = str.split(",");
+    // Array: ["Hello", "World"]
+    ```
+    Explanation: The `split` method separates a string into an array using a specified delimiter.
+
+12. **charAt:**
+    ```javascript
+    var str = "Hello";
+    var char = str.charAt(0);
+    // First Character: "H"
+    ```
+    Explanation: The `charAt` method returns the character at a specified index.
+
+13. **charCodeAt:**
+    ```javascript
+    var str = "Hello";
+    var unicode = str.charCodeAt(0);
+    // Unicode of "H": 72
+    ```
+    Explanation: The `charCodeAt` method returns the Unicode of the character at a specified index.
+
+14. **startsWith and endsWith:**
+    ```javascript
+    var str = "Hello World";
+    var startsWithHello = str.startsWith("Hello"); // true
+    var endsWithWorld = str.endsWith("World"); // true
+    ```
+    Explanation: `startsWith` and `endsWith` check if a string starts or ends with a specific substring.
+
+15. **includes:**
+    ```javascript
+    var str = "Hello World";
+    var containsHello = str.includes("Hello"); // true
+    ```
+    Explanation: The `includes` method checks if a string contains a specific substring.
+
+16. **repeat:**
+    ```javascript
+    var str = "Hello ";
+    var repeatedStr = str.repeat(3);
+    // Repeated String: "Hello Hello Hello"
+    ```
+    Explanation: The `repeat` method repeats a string a specified number of times.
+
+17. **String interpolation (Template Literals):**
+    ```javascript
+    var name = "John";
+    var greeting = `Hello, ${name}!`;
+    // Interpolated String: "Hello, John!"
+    ```
+    Explanation: Template literals allow string interpolation with `${}`.
+
+18. **String.fromCharCode:**
+    ```javascript
+    var str = String.fromCharCode(72, 101, 108, 108, 111);
+    // Result: "Hello"
+    ```
+    Explanation: The `String.fromCharCode` method creates a string from specified Unicode values.
+
+19. **String.fromCodePoint:**
+    ```javascript
+    var str = String.fromCodePoint(72, 101, 108, 108, 111);
+    // Result: "Hello"
+    ```
+    Explanation: The `String.fromCodePoint` method creates a string from specified Unicode code points.
+
+20. **substr:**
+    ```javascript
+    var str = "Hello World";
+    var substr = str.substr(6, 5);
+    // Substring from index 6: "World"
+    ```
+    Explanation: The `substr` method returns a specified number of characters from a string, starting at a specified index.
+
+
+
 # Array Methods in JavaScript
 
 JavaScript provides a variety of built-in methods to manipulate arrays. Below are explanations for some commonly used array methods:
