@@ -241,7 +241,6 @@ let strComparison2 = "02" > 1; // true
 ```
 
 ## Null and Undefined Comparison
-- `null` is considered equal to `undefined` but not greater or less than.
 
 ```javascript
 let nullComparison1 = null > 0; // false
