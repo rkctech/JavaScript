@@ -101,7 +101,7 @@ console.log(myVariable); // Output: undefined
 - While `null` is a deliberate assignment to indicate a lack of value, `undefined` often represents the default state of variables that haven't been explicitly set.
   
   # JavaScript Type Conversion with Number(), Boolean(), and String() Functions
-  Certainly! The `Number()`, `Boolean()`, and `String()` functions in JavaScript are used for type conversion, allowing you to explicitly convert values from one data type to another. Here's a brief explanation of each:
+  The `Number()`, `Boolean()`, and `String()` functions in JavaScript are used for type conversion, allowing you to explicitly convert values from one data type to another. Here's a brief explanation of each:
 
 ### 1. `Number()` Function:
 - **Purpose:** Converts a value to a number.
