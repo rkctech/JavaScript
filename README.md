@@ -99,6 +99,47 @@ console.log(myVariable); // Output: undefined
 
 **Note:**
 - While `null` is a deliberate assignment to indicate a lack of value, `undefined` often represents the default state of variables that haven't been explicitly set.
+  
+  # JavaScript Type Conversion with Number(), Boolean(), and String() Functions
+  Certainly! The `Number()`, `Boolean()`, and `String()` functions in JavaScript are used for type conversion, allowing you to explicitly convert values from one data type to another. Here's a brief explanation of each:
+
+### 1. `Number()` Function:
+- **Purpose:** Converts a value to a number.
+- **Usage:**
+  ```javascript
+  let stringValue = "33";
+  let numericValue = Number(stringValue);
+  ```
+- **Conversion Rules:**
+  - Strings containing numeric characters are converted to numbers (e.g., "33" becomes 33).
+  - Strings with non-numeric characters or invalid numeric formats result in `NaN`.
+  - `null` is converted to `0`.
+  - `undefined` is converted to `NaN`.
+  - `true` is converted to `1`, and `false` is converted to `0`.
+
+### 2. `Boolean()` Function:
+- **Purpose:** Converts a value to a boolean.
+- **Usage:**
+  ```javascript
+  let stringValue = "hitesh";
+  let booleanValue = Boolean(stringValue);
+  ```
+- **Conversion Rules:**
+  - Numeric values: `1` is converted to `true`, `0` and `NaN` are converted to `false`.
+  - Strings: An empty string `""` is converted to `false`, any non-empty string is converted to `true`.
+  - `null`, `undefined`, and `NaN` are converted to `false`.
+  - Any other non-boolean value is converted to `true`.
+
+### 3. `String()` Function:
+- **Purpose:** Converts a value to a string.
+- **Usage:**
+  ```javascript
+  let numericValue = 33;
+  let stringValue = String(numericValue);
+  ```
+- **Conversion Rule:**
+  - Any data type can be converted to a string.
+  - The conversion is straightforward, preserving the value but representing it as a string.
 
 1. **Concatenation:**
    ```javascript
