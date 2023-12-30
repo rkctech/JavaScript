@@ -943,58 +943,53 @@ The behavior of this can be a bit tricky, and it is influenced by the following 
 
 1. Global Context:
    When this is used outside of any function or method, it refers to the global object. In a web browser, the global object is typically window.
-
+```javascript
+      console.log(this); // Refers to the global object (e.g., window in a browser)
    
-   console.log(this); // Refers to the global object (e.g., window in a browser)
-   
-
+```
 2. Function Context:
    Inside a function, the value of this depends on how the function is called.
 
    - Regular Function Call:
      If a function is called as a standalone function (not a method or part of an object), this refers to the global object.
-
-     
-     function exampleFunction() {
+```javascript
+          function exampleFunction() {
          console.log(this);
      }
 
      exampleFunction(); // Refers to the global object (e.g., window in a browser)
      
-
+```
    - Method Call:
      When a function is a method of an object, this refers to the object on which the method is invoked.
-
-     
-     const obj = {
+```javascript
+          const obj = {
          method: function() {
              console.log(this);
          }
      };
 
      obj.method(); // Refers to the object 'obj'
-     
+     ```
 
 3. Constructor Call:
    When a function is used as a constructor with the new keyword, this refers to the newly created instance.
-
-   
-   function ConstructorExample() {
+```javascript
+      function ConstructorExample() {
        this.property = "some value";
    }
 
    const instance = new ConstructorExample();
    console.log(instance.property); // Outputs "some value"
-   
+   ```
 
 4. Event Handlers:
    In event handler functions, this often refers to the element that triggered the event.
-
-   
-   document.getElementById("myButton").addEventListener("click", function() {
+```javascript
+      document.getElementById("myButton").addEventListener("click", function() {
        console.log(this); // Refers to the button element
    });
-   
+   ```
 
 It's important to be aware of the different contexts in which this can be used to understand its value correctly. The arrow function in JavaScript behaves differently regarding this, as it does not have its own this and instead inherits it from the surrounding lexical scope.
 
@@ -1004,21 +999,19 @@ In JavaScript, the new keyword is used to create instances of user-defined objec
 
 1. Constructor Function:
    You define a constructor function that serves as a blueprint for creating objects. This function typically initializes properties or performs setup tasks.
-
-   
-   function Person(name, age) {
+```javascript
+      function Person(name, age) {
        this.name = name;
        this.age = age;
    }
    
-
+```
 2. Creating an Instance:
    You use the new keyword to create an instance of the object based on the constructor function.
-
+```javascript
+      const person1 = new Person("John", 30);
    
-   const person1 = new Person("John", 30);
-   
-
+```
    The new keyword does the following:
    - Creates a new empty object.
    - Sets the this value of the constructor function to the newly created object.
@@ -1029,14 +1022,13 @@ In JavaScript, the new keyword is used to create instances of user-defined objec
 
 3. Accessing Properties:
    You can access the properties of the created object.
-
-   
-   console.log(person1.name); // Outputs: "John"
+```javascript
+      console.log(person1.name); // Outputs: "John"
    console.log(person1.age);  // Outputs: 30
-   
+   ```
 
 Here's a more complete example:
-
+```javascript
 function Person(name, age) {
     this.name = name;
     this.age = age;
@@ -1050,7 +1042,7 @@ const person2 = new Person("Jane", 25);
 
 person1.sayHello(); // Outputs: "Hello, my name is John and I am 30 years old."
 person2.sayHello(); // Outputs: "Hello, my name is Jane and I am 25 years old."
+```
 
 In this example, Person is a constructor function, and person1 and person2 are instances of the Person object created using the new keyword. Each instance has its own set of properties and methods defined in the constructor function.
-
 
