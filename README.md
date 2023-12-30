@@ -917,5 +917,24 @@ console.log(instructor);
 ]
 
 ```
+# Creating an Object with a Read-Only Property
+```javasceipt
+const myObject = {};
+
+Object.defineProperty(myObject, 'readOnlyProperty', {
+    value: 'This is a read-only property',
+    writable: false,  // Setting writable to false makes the property read-only
+    enumerable: true, // You can set enumerable to false if you want to hide the property in for...in loops
+    configurable: false // Setting configurable to false prevents further modifications to the property
+});
+
+console.log(myObject.readOnlyProperty); // Outputs: "This is a read-only property"
+
+// Attempting to modify the read-only property will throw an error
+// myObject.readOnlyProperty = 'New Value';  // This will throw an error
+
+// Attempting to redefine the property will throw an error
+// Object.defineProperty(myObject, 'readOnlyProperty', { value: 'New Value' }); // This will throw an error
+```
 
 
