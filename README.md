@@ -918,7 +918,7 @@ console.log(instructor);
 
 ```
 # Creating an Object with a Read-Only Property
-```javasceipt
+```javascript
 const myObject = {};
 
 Object.defineProperty(myObject, 'readOnlyProperty', {
