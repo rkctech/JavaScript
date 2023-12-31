@@ -336,10 +336,7 @@ console.log(Math.floor(Math.random() * (max - min + 1)) + min); // Logs a random
 // Output: Random integer between 10 and 20
 ```
 # String Operations:
-```javascript
-const strObj = new String('Hello, World!');
-console.log(strObj); // Outputs: [String: 'Hello, World!']
-```
+
 1. **Concatenation:**
    ```javascript
    var str1 = "Hello";
