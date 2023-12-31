@@ -959,6 +959,7 @@ The behavior of this can be a bit tricky, and it is influenced by the following 
 ```
    - Method Call:
      When a function is a method of an object, this refers to the object on which the method is invoked.
+     
 ```javascript
           const obj = {
          method: function() {
@@ -971,6 +972,7 @@ The behavior of this can be a bit tricky, and it is influenced by the following 
 
 3. Constructor Call:
    When a function is used as a constructor with the new keyword, this refers to the newly created instance.
+
 ```javascript
       function ConstructorExample() {
        this.property = "some value";
@@ -978,10 +980,12 @@ The behavior of this can be a bit tricky, and it is influenced by the following 
 
    const instance = new ConstructorExample();
    console.log(instance.property); // Outputs "some value"
+
    ```
 
 4. Event Handlers:
    In event handler functions, this often refers to the element that triggered the event.
+   
 ```javascript
       document.getElementById("myButton").addEventListener("click", function() {
        console.log(this); // Refers to the button element
