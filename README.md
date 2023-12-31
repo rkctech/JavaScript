@@ -961,14 +961,14 @@ The behavior of this can be a bit tricky, and it is influenced by the following 
      When a function is a method of an object, this refers to the object on which the method is invoked.
      
 ```javascript
-          const obj = {
+         const obj = {
          method: function() {
              console.log(this);
          }
      };
 
-     obj.method(); // Refers to the object 'obj'
-     ```
+     obj.method(); // Refers to the object 'obj' 
+```
 
 3. Constructor Call:
    When a function is used as a constructor with the new keyword, this refers to the newly created instance.
@@ -981,7 +981,7 @@ The behavior of this can be a bit tricky, and it is influenced by the following 
    const instance = new ConstructorExample();
    console.log(instance.property); // Outputs "some value"
 
-   ```
+```
 
 4. Event Handlers:
    In event handler functions, this often refers to the element that triggered the event.
@@ -990,7 +990,7 @@ The behavior of this can be a bit tricky, and it is influenced by the following 
       document.getElementById("myButton").addEventListener("click", function() {
        console.log(this); // Refers to the button element
    });
-   ```
+```
 
 It's important to be aware of the different contexts in which this can be used to understand its value correctly. The arrow function in JavaScript behaves differently regarding this, as it does not have its own this and instead inherits it from the surrounding lexical scope.
 
@@ -1026,23 +1026,23 @@ In JavaScript, the new keyword is used to create instances of user-defined objec
 ```javascript
       console.log(person1.name); // Outputs: "John"
    console.log(person1.age);  // Outputs: 30
-   ```
+```
 
 Here's a more complete example:
 ```javascript
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
-    this.sayHello = function() {
-        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
-    };
-}
-
-const person1 = new Person("John", 30);
-const person2 = new Person("Jane", 25);
-
-person1.sayHello(); // Outputs: "Hello, my name is John and I am 30 years old."
-person2.sayHello(); // Outputs: "Hello, my name is Jane and I am 25 years old."
+  function Person(name, age) {
+      this.name = name;
+      this.age = age;
+      this.sayHello = function() {
+          console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+      };
+  }
+  
+  const person1 = new Person("John", 30);
+  const person2 = new Person("Jane", 25);
+  
+  person1.sayHello(); // Outputs: "Hello, my name is John and I am 30 years old."
+  person2.sayHello(); // Outputs: "Hello, my name is Jane and I am 25 years old."
 ```
 
 In this example, Person is a constructor function, and person1 and person2 are instances of the Person object created using the new keyword. Each instance has its own set of properties and methods defined in the constructor function.
