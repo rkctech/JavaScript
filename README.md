@@ -1047,3 +1047,90 @@ Here's a more complete example:
 
 In this example, Person is a constructor function, and person1 and person2 are instances of the Person object created using the new keyword. Each instance has its own set of properties and methods defined in the constructor function.
 
+# Function in JS
+JavaScript functions organize, reuse code, handle events, async tasks, return values, and enable encapsulation, abstraction, and scope management for flexible programming.
+
+1. **Function Declarations:**
+   ```javascript
+   function myFunction() {
+       // code here
+   }
+   ```
+
+2. **Function Expressions:**
+   ```javascript
+   var myFunction = function() {
+       // code here
+   };
+   ```
+
+3. **Arrow Functions (ES6 and later):**
+   ```javascript
+   const myFunction = () => {
+       // code here
+   };
+   ```
+
+4. **Anonymous Functions:**
+   Functions without a name. Can be used as function expressions.
+   ```javascript
+   var result = function() {
+       // code here
+   };
+   ```
+
+5. **IIFE (Immediately Invoked Function Expression):**
+   ```javascript
+   (function() {
+       // code here
+   })();
+   ```
+
+6. **Generator Functions (ES6 and later):**
+   ```javascript
+   function* generatorFunction() {
+       // code here
+   }
+   ```
+
+7. **Callback Functions:**
+   Functions passed as arguments to other functions, often used in asynchronous operations.
+   ```javascript
+   function fetchData(callback) {
+       // code to fetch data
+       callback(data);
+   }
+   ```
+
+8. **Constructor Functions:**
+   Used to create objects and can be invoked with the `new` keyword.
+   ```javascript
+   function Person(name, age) {
+       this.name = name;
+       this.age = age;
+   }
+
+   var person1 = new Person("John", 25);
+   ```
+
+9. **Recursive Functions:**
+   Functions that call themselves.
+   ```javascript
+   function factorial(n) {
+       if (n === 0 || n === 1) {
+           return 1;
+       } else {
+           return n * factorial(n - 1);
+       }
+   }
+   ```
+
+10. **Higher-Order Functions:**
+    Functions that take other functions as arguments or return functions.
+    ```javascript
+    function higherOrderFunction(callback) {
+        // code here
+        callback();
+    }
+    ```
+
