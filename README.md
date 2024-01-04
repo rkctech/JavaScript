@@ -1235,5 +1235,39 @@ Arrow functions in JavaScript offer shorthand syntax for concise code. Here are 
        }, 1000);
    }
    ```
+# Memory Allocation in JavaScript
+
+1. **Primitive Data Types:**
+    - **Stored in Stack:** `string`, `number`, `boolean`, `null`, `undefined`, `BigInt`, `symbol`.
+    - **Pass by Value:** When assigning or passing these, a copy of the actual value is made. Modifying one variable doesn’t affect another holding the same value.
+
+2. **Reference/Non-primitive Data Types:**
+    - **Stored in Heap:** `object`, `array`, `function`.
+    - **Pass by Reference (Reference):** Variables hold references to memory locations where the actual data resides. Assigning or passing these doesn't create a copy of the entire data but a reference to the original.
+
+3. **Dynamic Typing in JavaScript:**
+    - Data types are determined implicitly based on the assigned value.
+    - Variables can hold different types of values during the program's execution.
+
+### Example:
+```javascript
+// Primitive types (stored in stack, pass by value)
+let num1 = 10; // 'num1' holds the value 10
+let num2 = num1; // 'num2' gets a copy of the value from 'num1'
+
+num1 = 20; // Changing 'num1' doesn't affect 'num2'
+
+// Reference types (stored in heap, pass by reference)
+let arr1 = [1, 2, 3]; // 'arr1' holds a reference to an array in the heap
+let arr2 = arr1; // 'arr2' now references the same array as 'arr1'
+
+arr1.push(4); // Changes made via 'arr1' are reflected in 'arr2' too
+
+// Dynamic Typing
+let dynamicVar = 42; // Initially, 'dynamicVar' holds a number
+dynamicVar = "Hello"; // Later, 'dynamicVar' holds a string
+```
+
+Understanding these principles is fundamental for effectively working with JavaScript's dynamic typing and memory allocation strategies.
 
 
