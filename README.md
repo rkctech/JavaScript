@@ -827,6 +827,29 @@ Choose the method that suits your preferences and coding style. The spread opera
 
 4. `let score1 = 100 let score2 = 200 let score3 = 300 console.log(Array.of(score1, score2, score3));` - This uses `Array.of()` to create a new array with the values `100`, `200`, and `300` as elements. The output will be `[100, 200, 300]`. `Array.of()` creates an array from its arguments, regardless of their types.
 
+#  Destructuring of Array
+```javascript
+  // Basic array destructuring
+  const numbers = [1, 2, 3, 4, 5];
+  
+  // Without destructuring
+  const first = numbers[0];
+  const second = numbers[1];
+  const rest = numbers.slice(2); // Extracting the rest of the elements
+  
+  console.log(first); // Output: 1
+  console.log(second); // Output: 2
+  console.log(rest); // Output: [3, 4, 5]
+  
+  // With destructuring
+  const [a, b, ...others] = numbers;
+  
+  console.log(a); // Output: 1
+  console.log(b); // Output: 2
+  console.log(others); // Output: [3, 4, 5]
+```
+
+
 ```javascript
 const mySym = Symbol("key1");
 
