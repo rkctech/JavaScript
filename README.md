@@ -1377,6 +1377,119 @@ Once the global execution context completes, the program finishes its execution.
 
 *Note: The returned value is passed to the calling context. If a function is called within another function, the returned value is typically used in the context of the calling function.*
 
+# Operators in JS
+
+### Comparison Operators:
+
+Comparison operators are used to compare values and return a Boolean result.
+
+- **Equal (`==`):** Checks if two values are equal, converts types if needed.
+- **Strict Equal (`===`):** Checks if two values are equal without type conversion.
+- **Not Equal (`!=`):** Checks if two values are not equal, converts types if needed.
+- **Strict Not Equal (`!==`):** Checks if two values are not equal without type conversion.
+- **Greater Than (`>`), Less Than (`<`), Greater Than or Equal (`>=`), Less Than or Equal (`<=`):** Compare numerical values.
+
+### Logical Operators:
+
+Logical operators are used to perform logical operations on values.
+
+- **Logical AND (`&&`):** Returns true if both operands are true.
+- **Logical OR (`||`):** Returns true if at least one operand is true.
+- **Logical NOT (`!`):** Returns true if the operand is false and vice versa.
+
+### Ternary Operator (`? :`):
+
+The ternary operator is a shorthand for an `if-else` statement.
+
+```javascript
+const result = condition ? trueValue : falseValue;
+```
+
+### Truthy and Falsy Values:
+
+In JavaScript, values are either truthy or falsy.
+
+- **Falsy Values:** `false`, `0`, `''` (empty string), `null`, `undefined`, `NaN`.
+- **Truthy Values:** Anything not falsy is truthy.
+
+### Nullish Coalescing Operator (`??`):
+
+The Nullish Coalescing Operator returns the right-hand operand when the left-hand operand is `null` or `undefined`; otherwise, it returns the left-hand operand.
+
+```javascript
+const result = variable ?? defaultValue;
+```
+
+### Examples:
+
+```javascript
+// Comparison Operators
+const a = 5;
+const b = '5';
+
+console.log(a == b); // true (loose equality)
+console.log(a === b); // false (strict equality)
+
+// Logical Operators
+const x = true;
+const y = false;
+
+console.log(x && y); // false (logical AND)
+console.log(x || y); // true (logical OR)
+console.log(!x); // false (logical NOT)
+
+// Ternary Operator
+const age = 20;
+const isAdult = age >= 18 ? 'Yes' : 'No';
+console.log(isAdult); // Yes
+
+// Truthy and Falsy Values
+const falsyValue = 0;
+const truthyValue = 'Hello';
+
+console.log(Boolean(falsyValue)); // false
+console.log(Boolean(truthyValue)); // true
+
+// Nullish Coalescing Operator
+const username = null;
+const defaultUsername = 'Guest';
+
+const finalUsername = username ?? defaultUsername;
+console.log(finalUsername); // Guest
+```
+
+
+# Nullish Coalescing Operator (`??`)
+
+- **Purpose:** Used to provide a default value when a variable is `null` or `undefined`.
+  
+- **Syntax:**
+  ```javascript
+  const result = variable ?? defaultValue;
+  ```
+
+- **Behavior:**
+  - If `variable` is `null` or `undefined`, `result` is set to `defaultValue`.
+  - If `variable` is any other falsy value (e.g., `0`, `false`, `''`), `result` is set to `variable`.
+
+- **Example:**
+  ```javascript
+       const example1 = null ?? 'default value';
+      console.log(example1); // Output: 'default value'
+      
+      const example2 = undefined ?? 'default value';
+      console.log(example2); // Output: 'default value'
+      
+      const example3 = 0 ?? 'default value';
+      console.log(example3); // Output: 0 (because 0 is not null or undefined)
+  ```
+
+- **Use Case:**
+  - Provides a concise way to handle default values without including other falsy values.
+  - Useful when you specifically want to check for `null` or `undefined`.
+
+The Nullish Coalescing Operator is a helpful tool for handling default values in a way that distinguishes between `null`/`undefined` and other falsy values.
+
 # Conditional Statement in JS
 Certainly! Let's combine the syntax, examples, and expected outputs for each type of conditional statement in JavaScript:
 
