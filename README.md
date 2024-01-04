@@ -1510,6 +1510,211 @@ In JavaScript's `switch` statement:
    // Output: "Example 5: It's a sunny day"
    ```
 
+# JavaScript Loops and Methods Examples
+
+## 1. for loop:
+
+```javascript
+// Syntax
+for (initialization; condition; update) {
+    // code to be executed in each iteration
+}
+
+// Example
+for (let i = 1; i <= 5; i++) {
+    console.log(`For Loop: Iteration ${i}`);
+}
+
+// Output:
+// For Loop: Iteration 1
+// For Loop: Iteration 2
+// For Loop: Iteration 3
+// For Loop: Iteration 4
+// For Loop: Iteration 5
+```
+
+## 2. while loop:
+
+```javascript
+// Syntax
+while (condition) {
+    // code to be executed while the condition is true
+}
+
+// Example
+let counter = 1;
+
+while (counter <= 5) {
+    console.log(`While Loop: Iteration ${counter}`);
+    counter++;
+}
+
+// Output:
+// While Loop: Iteration 1
+// While Loop: Iteration 2
+// While Loop: Iteration 3
+// While Loop: Iteration 4
+// While Loop: Iteration 5
+```
+
+## 3. do-while loop:
+
+```javascript
+// Syntax
+do {
+    // code to be executed at least once
+} while (condition);
+
+// Example
+let num = 1;
+
+do {
+    console.log(`Do-While Loop: Iteration ${num}`);
+    num++;
+} while (num <= 5);
+
+// Output:
+// Do-While Loop: Iteration 1
+// Do-While Loop: Iteration 2
+// Do-While Loop: Iteration 3
+// Do-While Loop: Iteration 4
+// Do-While Loop: Iteration 5
+```
+
+## 4. for...in loop (for iterating over object properties):
+
+```javascript
+// Syntax
+for (variable in object) {
+    // code to be executed for each property
+}
+
+// Example
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+
+for (let key in person) {
+    console.log(`For...In Loop: ${key}: ${person[key]}`);
+}
+
+// Output:
+// name: John
+// age: 30
+// city: New York
+```
+
+## 5. for...of loop (for iterating over iterable objects like arrays):
+
+```javascript
+// Syntax
+for (variable of iterable) {
+    // code to be executed for each element
+}
+
+// Example
+const numbers = [1, 2, 3, 4, 5];
+
+for (let num of numbers) {
+    console.log(`For...Of Loop: ${num}`);
+}
+
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
+```
+
+## 6. forEach method (array method for iterating over elements):
+
+```javascript
+// Syntax
+array.forEach(function(element, index, array) {
+    // code to be executed for each element
+});
+
+// Example
+const numbersForEach = [1, 2, 3, 4, 5];
+
+numbersForEach.forEach(function(num) {
+    console.log(`forEach Method: ${num}`);
+});
+
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
+```
+
+## 7. map method (array method for creating a new array based on existing one):
+
+```javascript
+// Syntax
+const newArray = array.map(function(element, index, array) {
+    // code to be executed for each element
+    // return the new value for the new array
+});
+
+// Example
+const numbersMap = [1, 2, 3, 4, 5];
+
+const squaredNumbers = numbersMap.map(function(num) {
+    return num * num;
+});
+
+console.log(`map Method: ${squaredNumbers}`);
+// Output: map Method: 1,4,9,16,25
+```
+
+## 8. filter method (array method for creating a new array with filtered elements):
+
+```javascript
+// Syntax
+const newArray = array.filter(function(element, index, array) {
+    // code to be executed for each element
+    // return true to include the element, false to exclude it
+});
+
+// Example
+const numbersFilter = [1, 2, 3, 4, 5];
+
+const evenNumbers = numbersFilter.filter(function(num) {
+    return num % 2 === 0;
+});
+
+console.log(`filter Method: ${evenNumbers}`);
+// Output: filter Method: 2,4
+```
+
+## 9. reduce method (array method for reducing an array to a single value):
+
+```javascript
+// Syntax
+const result = array.reduce(function(accumulator, currentValue, index, array) {
+    // code to be executed for each element
+    // update the accumulator with the result for the next iteration
+    // return the final result
+}, initialValue);
+
+// Example
+const numbersReduce = [1, 2, 3, 4, 5];
+
+const sum = numbersReduce.reduce(function(accumulator, num) {
+    return accumulator + num;
+}, 0);
+
+console.log(`reduce Method: ${sum}`);
+// Output: reduce Method: 15
+```
+
+These examples cover various loop and array method scenarios in JavaScript with their corresponding syntax, examples, and expected outputs.
+
 
 
 
