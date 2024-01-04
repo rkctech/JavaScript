@@ -1293,4 +1293,67 @@ dynamicVar = "Hello"; // Later, 'dynamicVar' holds a string
 
 Understanding these principles is fundamental for effectively working with JavaScript's dynamic typing and memory allocation strategies.
 
+# JavaScript Execution Context
+
+### Global Execution Context:
+
+1. **Memory Phase:**
+   - Creation of the global object (e.g., `window` in the browser environment).
+   - Setup of the `this` keyword.
+   - Creation of the outer environment reference.
+   - Variable and function declarations are hoisted, and memory space is allocated.
+
+2. **Execution Phase:**
+   - Code is executed line by line.
+
+### Function Execution Context:
+
+1. **Memory Phase:**
+   - Creation of the `arguments` object (for functions).
+   - Setup of the `this` keyword (depending on how the function is called).
+   - Creation of the outer environment reference (lexical scope).
+   - Hoisting of variables and function declarations within the function.
+
+2. **Execution Phase:**
+   - Code is executed line by line.
+
+### Call Stack:
+
+- The call stack is a data structure that keeps track of the currently executing context (function or global code).
+- When a function is called, a new execution context is created and pushed onto the top of the call stack.
+- When a function completes its execution, its context is popped off the call stack.
+- Follows the Last In, First Out (LIFO) principle.
+
+### Scope Chain:
+
+- The scope chain is a series of nested scopes that the JavaScript engine uses to resolve variable references.
+- Each execution context has a reference to its outer (enclosing) environment, forming a chain.
+- When a variable is referenced, the engine searches the scope chain to find the first occurrence of the variable.
+
+### Lexical Scope:
+
+- Lexical scope means that the scope of a variable is determined by its position in the source code.
+- The scope chain is determined by the physical structure of the code, regardless of how or where functions are called.
+
+### Example:
+
+```javascript
+let globalVariable = 'I am global';
+
+function outerFunction() {
+  let outerVariable = 'I am outer';
+
+  function innerFunction() {
+    let innerVariable = 'I am inner';
+    console.log(globalVariable, outerVariable, innerVariable);
+  }
+
+  innerFunction();
+}
+
+outerFunction();
+```
+
+In this example, there are multiple execution contexts created: the global execution context, the execution context for `outerFunction`, and the execution context for `innerFunction`. Each function has its own scope, and variables are resolved based on the lexical scope. The call stack keeps track of the current execution context.
+
 
