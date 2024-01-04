@@ -849,6 +849,7 @@ Choose the method that suits your preferences and coding style. The spread opera
   console.log(others); // Output: [3, 4, 5]
 ```
 
+# Object in JavaScript
 
 ```javascript
 const mySym = Symbol("key1");
