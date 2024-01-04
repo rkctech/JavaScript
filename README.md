@@ -1377,5 +1377,139 @@ Once the global execution context completes, the program finishes its execution.
 
 *Note: The returned value is passed to the calling context. If a function is called within another function, the returned value is typically used in the context of the calling function.*
 
+# Conditional Statement in JS
+Certainly! Let's combine the syntax, examples, and expected outputs for each type of conditional statement in JavaScript:
+
+### 1. **if statement:**
+   ```javascript
+   // Syntax
+   if (condition) {
+       // code to be executed if the condition is true
+   }
+
+   // Example
+   let x = 10;
+
+   if (x > 5) {
+       console.log("Example 1: x is greater than 5");
+   }
+
+   // Output: "Example 1: x is greater than 5"
+   ```
+
+### 2. **if-else statement:**
+   ```javascript
+   // Syntax
+   if (condition) {
+       // code to be executed if the condition is true
+   } else {
+       // code to be executed if the condition is false
+   }
+
+   // Example
+   let age = 17;
+
+   if (age >= 18) {
+       console.log("Example 2: You are eligible to vote");
+   } else {
+       console.log("Example 2: You are not eligible to vote");
+   }
+
+   // Output: "Example 2: You are not eligible to vote"
+   ```
+
+### 3. **if-else if-else statement:**
+   ```javascript
+   // Syntax
+   if (condition1) {
+       // code to be executed if condition1 is true
+   } else if (condition2) {
+       // code to be executed if condition2 is true
+   } else {
+       // code to be executed if none of the conditions are true
+   }
+
+   // Example
+   let grade = 75;
+
+   if (grade >= 90) {
+       console.log("Example 3: A");
+   } else if (grade >= 80) {
+       console.log("Example 3: B");
+   } else if (grade >= 70) {
+       console.log("Example 3: C");
+   } else {
+       console.log("Example 3: F");
+   }
+
+   // Output: "Example 3: C"
+   ```
+
+### 4. **switch statement:**
+   ```javascript
+   // Syntax
+   switch (expression) {
+       case value1:
+           // code to be executed if expression equals value1
+           break;
+       case value2:
+           // code to be executed if expression equals value2
+           break;
+       default:
+           // code to be executed if none of the cases match
+   }
+
+   // Example with break
+   let day = "Monday";
+
+   switch (day) {
+       case "Monday":
+           console.log("Example 4: It's the start of the week");
+           break;
+       case "Friday":
+           console.log("Example 4: It's almost the weekend");
+           break;
+       default:
+           console.log("Example 4: It's a regular day");
+   }
+
+   // Output: "Example 4: It's the start of the week"
+
+  // Example without break
+
+      let day = "Monday";
+      
+      switch (day) {
+          case "Monday":
+              console.log("It's the start of the week");
+          // No break here, code execution will continue to the next case
+          case "Friday":
+              console.log("It's almost the weekend");
+          // The default case will also execute
+          default:
+              console.log("It's a regular day");
+      }
+
+   ```
+In JavaScript's `switch` statement:
+- `break` is used to exit the `switch` block after executing a matching `case`.
+- Without `break`, the code continues to execute the next `case` statements, leading to unintended behavior.
+- Using `break` ensures that only the matching `case` block is executed and the `switch` block is exited.
+  
+### 5. **ternary operator (conditional operator):**
+   ```javascript
+   // Syntax
+   condition ? expression_if_true : expression_if_false;
+
+   // Example
+   let isSunny = true;
+
+   let weatherMessage = isSunny ? "Example 5: It's a sunny day" : "Example 5: It's not sunny today";
+   console.log(weatherMessage);
+
+   // Output: "Example 5: It's a sunny day"
+   ```
+
+
 
 
