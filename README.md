@@ -1947,6 +1947,74 @@ These examples cover various loop and array method scenarios in JavaScript with 
 
 These methods provide a powerful way to manipulate the content and style of web pages dynamically using JavaScript. Keep in mind that when using `querySelectorAll()`, you get a NodeList, which is not an array but can be iterated over using methods like `forEach`.
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Operations on Unordered List</title>
+    <style>
+        /* CSS style for highlighting */
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Unordered List (ul) to be manipulated -->
+
+<ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<script>
+    // Select the unordered list using querySelector
+    var myList = document.querySelector("#myList");
+    console.log(myList)
+
+    // Create a new list item
+    var newItem = document.createElement("li");
+    newItem.textContent = "New Item";
+
+
+    // Append the new item to the unordered list
+    myList.appendChild(newItem);
+
+    // Select the first list item using querySelector
+    var firstListItem = myList.querySelector("li");
+    console.log(firstListItem)
+
+    // Update the content of the first list item
+    firstListItem.textContent = "Updated Item";
+
+    // Remove the second list item using querySelector
+    var secondListItem = myList.querySelector("li:nth-child(2)");
+    secondListItem.parentNode.removeChild(secondListItem);
+
+    // Select all list items using querySelectorAll
+    var listItems = myList.querySelectorAll("li");
+
+    // Add a class to all list items using forEach
+    listItems.forEach(function(item) {
+        item.classList.add("highlight");
+    });
+
+    // Apply styles to the remaining list items
+    listItems.forEach(function(item) {
+        item.style.color = "blue";
+        item.style.fontWeight = "bold";
+    });
+</script>
+
+</body>
+</html>
+```
+
 
 
 
