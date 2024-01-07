@@ -2181,6 +2181,81 @@ A couple of things to note:
 
 Keep in mind that if you're working with a more modern codebase, you might also consider using `document.querySelector()` or `document.querySelectorAll()` for more flexible and powerful element selection based on CSS selectors.
 
+# DOM Manipulation Example
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="container"></div>
+
+<script> 
+
+    // Create a new element
+
+    // way 1
+    const newElement = document.createElement('h1');
+
+    // Set attributes or properties if needed
+    newElement.id = 'newDiv';
+    newElement.className = 'newClass';
+    newElement.setAttribute("style","background-color:red")
+    newElement.textContent="Good way to element using textContent"
+    newElement.style.fontSize="20px"
+    console.log(newElement)
+
+    // Append the element to an existing element in the DOM
+    const containerElement = document.getElementById("container")
+    containerElement.appendChild(newElement);
+
+    // way -2
+    containerElement.innerHTML += "<h2>Good Morning</h2>"
+
+    // way -3
+    const createdNew1 = document.createElement("h3")
+    createdNew1.innerHTML = "ways no 3"
+    containerElement.appendChild(createdNew1)
+
+    // way -4
+    const createdNew2 = document.createElement("h4")
+    createdNew2.appendChild(document.createTextNode("ways no 4"))
+    containerElement.appendChild(createdNew2)
+
+    console.log(containerElement)
+    console.log(document.querySelector("body"))
+
+    // Accessing the dynamically created h2 element after it's added to the DOM
+    const secondElementInContainer = document.querySelector("#container h2")
+    console.log(secondElementInContainer)
+
+    // Edit 
+    // way 1
+    // secondElementInContainer.innerHTML = " Sir"
+    secondElementInContainer.innerHTML += " Sir"
+    
+    // way 2
+    const newH2 = document.createElement("h2")
+    newH2.textContent = "Way 2 in editing phase"
+    const usingReplace = secondElementInContainer.replaceWith(newH2)
+    
+    // way 3 
+    const elementH3 = document.querySelector("h3")
+    elementH3.outerHTML = "<h5>Way 3 in editing phase</h5>"
+
+    // Remove
+    const elementH1 = document.querySelector("h1")
+    elementH1.remove()
+
+</script>
+</body>
+</html>
+
+```
+
 
 
 
