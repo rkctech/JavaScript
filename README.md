@@ -2058,11 +2058,23 @@ These methods provide a powerful way to manipulate the content and style of web 
 
 <!-- Unordered List (ul) to be manipulated -->
 
+
 <ul id="myList">
     <li>Item 1</li>
     <li>Item 2</li>
     <li>Item 3</li>
 </ul>
+
+<!-- here we will use alternate mathods handle to same problem -->
+<div class="parent">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Tharsday</div>
+    <div class="day">Friday</div>
+    <div class="day">Saterday</div>
+    <div class="day">Sunday</div>
+</div>
 
 <script>
     // Select the unordered list using querySelector
@@ -2101,6 +2113,33 @@ These methods provide a powerful way to manipulate the content and style of web 
         item.style.color = "blue";
         item.style.fontWeight = "bold";
     });
+
+
+   // Alternate Problem Solution
+    const alterParent = document.querySelector(".parent")
+    console.log(alterParent)
+    console.log(alterParent.childNodes) // tree type DOM stracture inside the parent (just knowledge purpose)
+
+    //   const firstDay = alterParent.querySelector(".day")
+    //   console.log(firstDay)
+
+   // below methods we can use after selecting parent element
+    const parentChild = alterParent.children //get html collection
+    console.log(parentChild)
+    const parent_Nth_Child = alterParent.children[0] // pass any index value to get specific child
+    console.log(parent_Nth_Child)
+    const parentFirstChild = alterParent.firstElementChild // get first child 
+    console.log(parentFirstChild)
+    const parentLastChild = alterParent.lastElementChild // get last child
+    console.log(parentLastChild)
+
+    // how to move child to parent
+
+    const childToParent = parentFirstChild.parentElement
+    console.log(childToParent) // get parent element
+    const parentNextElementSibling = parentFirstChild.nextElementSibling
+    console.log(parentNextElementSibling) // get nextsibling
+
 </script>
 
 </body>
