@@ -2106,6 +2106,41 @@ These methods provide a powerful way to manipulate the content and style of web 
 </body>
 </html>
 ```
+## `getElementsByClassName()`
+it is used in JavaScript to select and return a collection of elements that have a specific class name. Here's how you can use it:
+
+```javascript
+// Get all elements with the class 'exampleClass'
+const elements = document.getElementsByClassName('exampleClass');
+
+// elements is a HTMLCollection, you can iterate over it or access specific elements
+for (let i = 0; i < elements.length; i++) {
+  console.log(elements[i].textContent);
+}
+```
+
+Or using a more modern approach with `forEach`:
+
+```javascript
+const elements = document.getElementsByClassName('exampleClass');
+
+// Convert HTMLCollection to an array and use forEach
+Array.from(elements).forEach(element => {
+  console.log(element.textContent);
+});
+```
+
+A couple of things to note:
+
+1. `getElementsByClassName` returns a live `HTMLCollection`, meaning it's automatically updated when the underlying document changes.
+  
+2. If you only expect a single element or want to work with the first one, you can directly access it like this:
+
+    ```javascript
+    const firstElement = document.getElementsByClassName('exampleClass')[0];
+    ```
+
+Keep in mind that if you're working with a more modern codebase, you might also consider using `document.querySelector()` or `document.querySelectorAll()` for more flexible and powerful element selection based on CSS selectors.
 
 
 
