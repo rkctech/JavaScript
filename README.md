@@ -1828,6 +1828,89 @@ console.log(`reduce Method: ${sum}`);
 
 These examples cover various loop and array method scenarios in JavaScript with their corresponding syntax, examples, and expected outputs.
 
+# DOM in JavaScript
+
+ ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Element Manipulation</title>
+    <style>
+        /* External Styles */
+        .heading {
+            font-family: Arial, sans-serif;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+
+<script
+
+    // console.log(this) // result => window object
+    // console.log (window.document) or console.dir(window.document) or console.log (document) or console.dir(document)
+
+    // Getting and setting id
+    var element = document.getElementById("title");
+    var idValue = element.id;
+    console.log("ID:", idValue); // Output: "ID: title"
+
+    // Set new id
+    element.id = "newTitleId";
+    console.log("New ID:", element.id); // Output: "New ID: newTitleId"
+
+    // Getting and setting className
+    var classNameValue = element.className;
+    console.log("Class Name:", classNameValue); // Output: "Class Name: heading"
+
+    // Set new class name
+    element.className = "newHeadingClass";
+    console.log("New Class Name:", element.className); // Output: "New Class Name: newHeadingClass"
+
+    // Using getAttribute to get the value of a specific attribute
+    var styleAttributeValue = element.getAttribute("style");
+    console.log("Style Attribute:", styleAttributeValue); // Output: "Style Attribute: display: none;"
+
+    // Using setAttribute to set the value of a specific attribute
+    element.setAttribute("data-custom", "some value");
+    console.log("Custom Attribute:", element.getAttribute("data-custom")); // Output: "Custom Attribute: some value"
+
+    // Using style property to manipulate CSS styles
+    element.style.color = "blue";
+    element.style.fontSize = "20px";
+
+    // Get the computed style
+    var computedStyle = window.getComputedStyle(element);
+    console.log("Computed Style - Color:", computedStyle.color); // Output: "Computed Style - Color: rgb(0, 0, 255)"
+    console.log("Computed Style - Font Size:", computedStyle.fontSize); // Output: "Computed Style - Font Size: 20px"
+
+    // ... (Continuation of the previous code)
+
+    // Using innerHTML, innerText, and textContent
+    var htmlContent = element.innerHTML;
+    console.log("innerHTML:", htmlContent); // Output: "innerHTML: DOM learning on Chai aur code <span style="display: none;">test text</span>"
+    // Explanation: innerHTML returns the HTML content within the element, including its children.
+
+    var textContent = element.innerText;
+    console.log("innerText:", textContent); // Output: "innerText: DOM learning on Chai aur code"
+    // Explanation: innerText returns the visible text content within the element, excluding hidden elements.
+
+    var rawTextContent = element.textContent;
+    console.log("textContent:", rawTextContent); // Output: "textContent: DOM learning on Chai aur code test text"
+    // Explanation: textContent returns all text content within the element, including hidden elements.
+
+</script>
+
+</body>
+</html>
+
+```
+
 
 
 
