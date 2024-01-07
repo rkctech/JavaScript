@@ -1889,8 +1889,6 @@ These examples cover various loop and array method scenarios in JavaScript with 
     console.log("Computed Style - Color:", computedStyle.color); // Output: "Computed Style - Color: rgb(0, 0, 255)"
     console.log("Computed Style - Font Size:", computedStyle.fontSize); // Output: "Computed Style - Font Size: 20px"
 
-    // ... (Continuation of the previous code)
-
     // Using innerHTML, innerText, and textContent
     var htmlContent = element.innerHTML;
     console.log("innerHTML:", htmlContent); // Output: "innerHTML: DOM learning on Chai aur code <span style="display: none;">test text</span>"
@@ -1910,6 +1908,44 @@ These examples cover various loop and array method scenarios in JavaScript with 
 </html>
 
 ```
+## `querySelector()` and `querySelectorAll()` 
+`querySelector()` and `querySelectorAll()` are two methods in JavaScript that allow you to select elements from the DOM (Document Object Model) using CSS-style selectors. Here's a brief explanation of each:
+
+1. **querySelector()**:
+   - **Syntax**: `element = document.querySelector(selector);`
+   - Returns the first element that matches the specified CSS selector within the document.
+   - If no matching element is found, it returns `null`.
+   - Example:
+     ```javascript
+     const firstParagraph = document.querySelector('p');
+     ```
+
+2. **querySelectorAll()**:
+   - **Syntax**: `nodeList = document.querySelectorAll(selector);`
+   - Returns a static NodeList (a collection of nodes) containing all elements that match the specified CSS selector within the document.
+   - If no matching elements are found, it returns an empty NodeList.
+   - Example:
+     ```javascript
+     const allParagraphs = document.querySelectorAll('p');
+     ```
+
+**CSS Selectors in brief**:
+- **Element Selector**: Selects elements based on the element name.
+  - Example: `'p'` selects all `<p>` elements.
+
+- **Class Selector**: Selects elements based on their class attribute.
+  - Example: `'.myClass'` selects all elements with the class 'myClass'.
+
+- **ID Selector**: Selects a single element based on its id attribute.
+  - Example: `'#myId'` selects the element with the id 'myId'.
+
+- **Attribute Selector**: Selects elements based on the presence or value of their attributes.
+  - Example: `'[name="myName"]'` selects all elements with `name` attribute set to 'myName'.
+
+- **Combinators**: Combine multiple selectors to define more complex rules.
+  - Example: `'div p'` selects all `<p>` elements that are descendants of a `<div>`.
+
+These methods provide a powerful way to manipulate the content and style of web pages dynamically using JavaScript. Keep in mind that when using `querySelectorAll()`, you get a NodeList, which is not an array but can be iterated over using methods like `forEach`.
 
 
 
