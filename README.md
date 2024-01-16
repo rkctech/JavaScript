@@ -2255,6 +2255,112 @@ Keep in mind that if you're working with a more modern codebase, you might also 
 </html>
 
 ```
+# Event in JavaScript
+
+1. **Mouse Events:**
+   - `click`: Triggered when a mouse button is pressed and released on an element.
+   - `dblclick`: Fired when a double click occurs.
+   - `mousedown`, `mouseup`: Occur when a mouse button is pressed or released over an element.
+   - `mousemove`: Fired when the mouse pointer moves within an element.
+   - `mouseover`, `mouseout`: Triggered when the mouse pointer enters or leaves an element.
+   - `mouseenter`, `mouseleave`: Similar to `mouseover` and `mouseout`, but don't bubble and don't trigger for nested elements.
+
+2. **Keyboard Events:**
+   - `keydown`, `keyup`: Occur when a key is pressed down or released.
+   - `keypress`: Fired when a key is pressed.
+
+3. **Form Events:**
+   - `submit`: Triggered when a form is submitted.
+   - `change`: Fired when the value of an input element changes.
+   - `input`: Occurs when the value of an input element is changed (modern browsers).
+   - `focus`, `blur`: Fired when an element gains or loses focus.
+
+4. **Window Events:**
+   - `load`: Triggered when the page has finished loading.
+   - `unload`: Fired when the user navigates away from the page.
+   - `resize`: Occurs when the browser window is resized.
+   - `scroll`: Triggered when the user scrolls.
+
+5. **Document Events:**
+   - `DOMContentLoaded`: Fired when the initial HTML document has been completely loaded and parsed.
+   - `readystatechange`: Triggered when the ready state of the document changes.
+
+6. **Drag and Drop Events:**
+   - `dragstart`, `dragend`: Fired when a drag operation starts or ends.
+   - `dragenter`, `dragleave`: Triggered when a dragged element enters or leaves a drop target.
+   - `dragover`: Occurs when a dragged element is over a valid drop target.
+   - `drop`: Fired when an element is dropped on a valid drop target.
+
+7. **Touch Events (for mobile):**
+   - `touchstart`, `touchend`, `touchmove`: Occur when a touch point is placed on, moved on, or removed from the touch surface.
+
+8. **Media Events:**
+   - `play`, `pause`: Fired when a media element starts or stops playing.
+   - `ended`: Triggered when a media element has finished playing.
+
+  # code for better understanding
+  ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+    <style>
+        body {
+            background-color: #414141;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+    <script>
+        // ================= Event Handling Theory ====================
+        
+        // onclick attribute is less flexible and may cause issues when scaling the application.
+        // document.getElementById('owl').onclick = function(){
+        //     alert("owl clicked")
+        // }
+
+        // addEventListener is preferred for better event handling.
+        
+        // Event object (e) contains information about the event.
+        // Properties: type, timestamp, defaultPrevented
+        // target, toElement, srcElement, currentTarget,
+        // clientX, clientY, screenX, screenY
+        // altKey, ctrlKey, shiftKey, keyCode
+
+        // Event propagation:
+        // false (default) - Event bubbling (inner to outer)
+        // true - Event capturing (outer to inner)
+
+        // Using stopPropagation() prevents event from further propagation.
+        // Using preventDefault() prevents the default action associated with the event.
+
+        // ==============================================================
+
+        document.querySelector('#images').addEventListener('click', function(e) {
+            if (e.target.tagName === 'IMG') {
+                console.log("Image clicked with ID:", e.target.id);
+                let removeIt = e.target.parentNode;
+                removeIt.remove();
+            }
+        });
+    </script>
+</body>
+</html>
+```
 
 
 
